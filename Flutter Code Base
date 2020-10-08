@@ -1,0 +1,27 @@
+//Init State :
+@override
+  void initState() {
+    //function goes here
+    super.initState();
+  }
+
+  //to fetch the data after executing the command
+  var response =
+        await http.post("http://192.168.0.107/studentinfo/fetch.php", body: {});
+    data = json.decode(response.body);
+
+//count = data.length
+
+  //List View Builder
+  ListView.builder(
+          itemCount: count,
+          itemBuilder: (context, index) {
+            return Container():
+            }
+    )
+
+
+  //How to navigate from OneScreen to another
+  Navigator.push(context,MaterialPageRoute(builder:(context) => SecondPage()));
+
+
